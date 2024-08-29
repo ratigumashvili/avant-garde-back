@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_resource_resources",
+  "info": {
+    "displayName": "resource",
+    "icon": "earth",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
