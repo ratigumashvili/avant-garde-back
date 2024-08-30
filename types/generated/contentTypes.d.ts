@@ -841,6 +841,7 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
     >;
     dates: Attribute.String;
     photo: Attribute.Media<'images'>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1003,6 +1004,7 @@ export interface ApiWorkWork extends Schema.CollectionType {
       'api::category.category'
     >;
     images: Attribute.Media<'images', true>;
+    seo: Attribute.Component<'shared.seo'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
