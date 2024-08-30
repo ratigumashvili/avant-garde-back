@@ -831,7 +831,7 @@ export interface ApiAuthorAuthor extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
+    name: Attribute.String & Attribute.Required;
     bio: Attribute.RichText;
     slug: Attribute.UID<'api::author.author', 'name'> & Attribute.Required;
     works: Attribute.Relation<
