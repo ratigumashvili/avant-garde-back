@@ -939,6 +939,7 @@ export interface ApiHomeHome extends Schema.SingleType {
   attributes: {
     content: Attribute.RichText;
     seo: Attribute.Component<'shared.seo'>;
+    header: Attribute.Media<'images'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
