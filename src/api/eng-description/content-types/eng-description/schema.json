@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "eng_descriptions",
+  "info": {
+    "singularName": "eng-description",
+    "pluralName": "eng-descriptions",
+    "displayName": "EngDescription",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

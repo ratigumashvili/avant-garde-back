@@ -925,6 +925,38 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiEngDescriptionEngDescription extends Schema.SingleType {
+  collectionName: 'eng_descriptions';
+  info: {
+    singularName: 'eng-description';
+    pluralName: 'eng-descriptions';
+    displayName: 'EngDescription';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    content: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::eng-description.eng-description',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::eng-description.eng-description',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -1039,6 +1071,7 @@ declare module '@strapi/types' {
       'api::author.author': ApiAuthorAuthor;
       'api::bibliography.bibliography': ApiBibliographyBibliography;
       'api::category.category': ApiCategoryCategory;
+      'api::eng-description.eng-description': ApiEngDescriptionEngDescription;
       'api::home.home': ApiHomeHome;
       'api::resource.resource': ApiResourceResource;
       'api::work.work': ApiWorkWork;
